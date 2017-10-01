@@ -57,9 +57,9 @@
 
 ## Communication flow
 
-![communication_normal](img\communication_normal.png)
+![communication_normal](img/communication_normal.png)
 
-![communication_error_request](img\communication_error_request.png)
+![communication_error_request](img/communication_error_request.png)
 
-![communication_error_reply](img\communication_error_reply.png)
+![communication_error_reply](img/communication_error_reply.png)
 
