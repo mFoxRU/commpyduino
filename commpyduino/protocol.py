@@ -61,7 +61,6 @@ class CommProtocol:
         for (to, from_) in reversed(self._ESCAPE_LIST):
             msg = msg.replace(from_, to)
         # Check length
-        print('Received: {}'.format(self.nicer(msg)))
         if len(msg) < 6:
             reply['status'] = Status.LEN_ERR
             return reply

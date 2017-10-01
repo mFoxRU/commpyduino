@@ -40,7 +40,6 @@ class Connector:
     def _communicate(self, cmd: int, data: bytearray=None) -> dict:
         self._last_command = cmd
         message = self._protocol.compose_request(cmd, data)
-        print('Sending: {}'.format(self._protocol.nicer(bytearray(message))))
         if not self._serial.isOpen():
             try:
                 self._serial.open()
@@ -54,7 +53,6 @@ class Connector:
         for _try in range(3):
             self._serial.write(message)
             rep = self._serial.read(1)
-            print('ACK? NAK?: {}'.format(self._protocol.nicer(bytearray(rep))))
             if rep[0] == self._protocol.ACK:
                 break
 

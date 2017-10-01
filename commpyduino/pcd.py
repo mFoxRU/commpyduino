@@ -29,7 +29,6 @@ class Translator:
             client.subscribe(self.req)
 
         def on_message(client, userdata, msg):
-            # print(msg.topic, str(msg.payload), userdata)
             reply = self.communicate(json.loads(msg.payload))
             client.publish(self.rep, json.dumps(reply, cls=SCEncoder))
 
