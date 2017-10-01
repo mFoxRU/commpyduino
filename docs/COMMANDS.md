@@ -131,10 +131,3 @@ Read `Value` on `Pin`.
 | **Returns**      |     —     |        |              |
 
 Write `Value` to `Pin`.
-
-## ToDo's:
-
-Future commands candidates:
-
-- Save pin modes and set them on start
-- Add WDT reset
